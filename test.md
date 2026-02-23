@@ -39,3 +39,13 @@ flowchart TD
     D2 --> E2
     D2 --> E3
 ```
+
+
+```mermaid
+flowchart LR
+    Data --> Architecture
+    Architecture --> Training
+    Training --> Foundation_Model
+    Foundation_Model --> Fine_Tuning
+    Fine_Tuning --> AI_Application
+```

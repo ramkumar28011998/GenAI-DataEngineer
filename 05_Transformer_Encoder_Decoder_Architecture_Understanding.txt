@@ -1,0 +1,42 @@
+🔷 Transformer Architecture — High Level
+======================================================================================
+
+Transformer follows encoder-decoder model also known as Sequence-to-Sequence model.
+
+Input Text → Pre processing -> Encoder → Decoder → Output Text
+
+Encoder = Understands the input sentence context.
+Decoder = Generates the output sentence (word by word) with context awareness.
+
+But, generally we need to perform pre processing of the input data before supplying data to the model.
+
+PRE PROCESSING STAGES :
+===============================
+- TOKENIZE THE DATA 
+- TENSORS CREATION
+- PADDING
+- FINAL INPUT FOR THE MODEL.
+
+MODEL :
+============================
+a) ENCODER : 
+To understand the meaning and context of the entire input sentence.
+It will produce the context-aware vectors.
+
+b) DECODER : 
+Generate output text one token at a time.
+
+Decoder looks at encoder output (input sentence understanding)
+And decides which input words are important for next output word.
+
+
+In our previous NLP activities, 
+we did not handle the preprocessing steps because pipeline instance will take care of all the required pre processing stages.
+
+But still, we can do the pre-processing stages by our own.
+
+- Using AutoModel  Class
+- Using Model Specific Class
+- Using Pipeline instance to perform pre processing activities.
+
+

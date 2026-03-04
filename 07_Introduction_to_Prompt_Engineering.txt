@@ -1,0 +1,43 @@
+Generative AI Tasks and Prompt Engineering
+------------------------------------------------
+Previously, when performing Generative AI tasks, we explicitly specified the task (or head) of the model.
+
+For example, 
+if we wanted to perform summarization, we selected a fine-tuned model that supports multiple tasks. 
+Since the model can perform different tasks, we explicitly mentioned:
+
+task = "summarization"
+
+This tells the model to use the summarization head to generate the required output.
+
+Steps for performing a summarization task (earlier approach)
+
+a. Choose a model capable of performing summarization.
+b. Explicitly specify the task/head (e.g., summarization) when calling the model.
+c. The model uses the corresponding head to generate the output.
+
+Modern Approach with Natural Language Instructions
+
+Modern large language models are trained with strong Natural Language Understanding (NLU) capabilities. 
+Because of this, the model can understand instructions written in natural language.
+Instead of explicitly selecting a task/head, we can simply describe what we want the model to do.
+For example:
+"Summarize the following text in 3 sentences."
+Based on the instruction and input, the model automatically understands that the task is summarization and internally selects the appropriate behavior.
+Prompt
+
+A prompt is the input given to a model and usually contains:
+=================================================================
+Instruction – what the model should do
+Context – background information if needed
+Input data – the content to process
+
+Example prompt:
+"Summarize the following article in 3 key points."
+
+Prompt Engineering
+===========================
+Designing clear and effective prompts to obtain high-quality and accurate outputs from a model is called Prompt Engineering.
+
+In simple terms:
+Prompt Engineering = Crafting better instructions so the model performs the desired task effectively.

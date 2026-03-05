@@ -1,0 +1,116 @@
+How prompts behave differently depending on the type of transformer model.
+
+1️⃣ Encoder-Only Models (Example: BERT)
+=============================================
+They read and understand text, but do not generate new text.
+Think of them like a reader or analyst.
+
+Example tasks:
+
+Sentiment Analysis
+Text Classification
+Token Classification (NER, POS tagging)
+
+Eg:
+Sentence: "The movie was fantastic"
+Task: Sentiment Classification
+Output: Positive
+
+The model analyzes meaning, not generate sentences.
+
+Why prompts have limited role
+
+Because the task is predefined.
+You usually give input text only, not creative instructions.
+
+Encoder-only models mainly understand text, not generate it.
+Therefore prompt engineering is not very important.
+
+
+
+
+
+
+2️⃣ Decoder-Only Models (Example: GPT, LLaMA)
+===============================================
+
+They generate text token by token.
+
+Think of them like a writer. 
+
+Example tasks:
+
+Chatbots
+Story writing
+Code generation
+Question answering
+
+Example:
+
+Prompt: Write a short story about a robot.
+
+Output:
+Once there was a robot living on Mars...
+
+Why prompts are critical
+
+Because the prompt controls the output.
+
+The prompt decides
+
+style
+
+length
+
+structure
+
+topic
+
+Decoder models rely heavily on good prompts, because they generate text from the prompt.
+When using HuggingFace pipelines you use:
+pipeline("text-generation")
+
+3️⃣ Encoder-Decoder Models (Example: T5, BART)
+====================================================
+These models do both:
+
+1️⃣ Encoder → understand input
+2️⃣ Decoder → generate output
+
+Think of them like a translator.
+
+Example: Translation
+
+Input:
+
+English: My name is Ram
+
+Output:
+
+French: Mon nom est Ram
+
+
+Why prompts have mixed role
+
+Because:
+
+Encoder understands the input
+Decoder generates the output
+
+But the task must still be specified.
+
+HuggingFace pipeline:
+pipeline("text2text-generation")
+
+
+SUMMARY:
+=============
+
+-------------------------------------------------------------------------------------------------------
+| Model Type      | Purpose               | Example Models | Prompt Importance | HF Task              |
+| --------------- | --------------------- | -------------- | ----------------- | -------------------- |
+| Encoder         | Understand text       | BERT           | Low               | classification tasks |
+| Decoder         | Generate text         | GPT            | Very High         | text-generation      |
+| Encoder-Decoder | Understand + Generate | T5, BART       | Medium            | text2text-generation |
+-------------------------------------------------------------------------------------------------------
+

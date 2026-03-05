@@ -41,3 +41,11 @@ Designing clear and effective prompts to obtain high-quality and accurate output
 
 In simple terms:
 Prompt Engineering = Crafting better instructions so the model performs the desired task effectively.
+
+
+Elements available in the user prompt:
+==========================================
+1. Instruction : A specific task or instruction you want the given model to perform.
+2. Context: External information or additional context that can guide the model to generate the better output or responses.
+3. Input Data : The input or question that we are interested in finding a response.
+4. Output Indicator : The type or format of the output while generating the response by the model.

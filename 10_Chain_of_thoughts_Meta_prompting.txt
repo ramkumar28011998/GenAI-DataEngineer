@@ -1,0 +1,80 @@
+Chain-of-Thought (CoT) Prompting
+===================================
+Definition:
+Chain-of-Thought prompting is a technique where the model is encouraged to explain its reasoning step-by-step before giving the final answer.
+Instead of jumping directly to the answer, the model breaks the problem into intermediate reasoning steps.
+
+Why it is used?
+====================
+Some problems require logical reasoning, such as:
+Math problems
+Logical puzzles
+Multi-step reasoning
+Complex decision making
+
+Chain-of-Thought helps the model think through the problem step by step, which usually improves accuracy.
+
+Example:
+
+Prompt:
+Q: If John has 3 apples and buys 2 more, how many apples does he have?
+Let's think step by step.
+Output:
+John starts with 3 apples.
+He buys 2 more apples.
+3 + 2 = 5.
+Answer: 5
+
+
+Instead of: Question -> Answer
+CoT encourages: Question → Reasoning Steps → Final Answer
+
+Chain-of-Thought prompting tells the model to "think step-by-step before answering."
+
+
+
+Meta Prompting
+=======================
+Definition:
+Meta prompting is a technique where the prompt guides the model on 
+how to think or structure its response rather than directly asking for the final answer.
+
+In simple terms:
+
+You give instructions about the reasoning strategy the model should follow.
+It is like telling the model how to approach the problem.
+
+Simple Idea
+===============
+Normal prompt: Explain photosynthesis.
+Meta prompt: Explain photosynthesis step by step as if teaching a beginner.
+
+Here you are guiding the thinking style of the model.
+
+What Meta Prompting Usually Specifies
+============================================
+You may instruct the model to:
+
+Think step-by-step
+Act as an expert
+Follow a structured format
+Critically review its answer
+Break the task into subtasks
+
+Meta prompting = prompting the model about how to reason, not just what to answer.
+
+Difference from Chain-of-Thought
+================================
+---------------------------------------------------------------------------------
+| Technique        | Idea                                                       |
+| ---------------- | ---------------------------------------------------------- |
+| Chain-of-Thought | Ask the model to show reasoning steps                      |
+| Meta Prompting   | Tell the model **how to think or structure the reasoning** |
+---------------------------------------------------------------------------------
+
+
+
+
+
+
+
